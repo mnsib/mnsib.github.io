@@ -16,7 +16,24 @@
 
     </head>
    <script>
-  
+  document.addEventListener("DOMContentLoaded", function(){
+    
+    document.querySelector(".home").addEventListener("click", () => {
+      alert(`You clicked on ${event.target.textContent}`)
+    })
+    
+    document.querySelector(".about").addEventListener("click", function(){
+      alert(`You clicked on ${event.target.textContent}`)
+    })
+    
+    document.querySelector(".projects").addEventListener("click", function(){
+      alert(`You clicked on ${event.target.textContent}`)
+    })
+    
+    document.querySelector(".blog").addEventListener("click", function(){
+      alert(`You clicked on ${event.target.textContent}`)
+    })
+  })
        
    </script>
     
@@ -26,6 +43,14 @@ body
 {
     background-color: #e1e3e7;
 }
+nav
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px;
+  background: #d0d3d4;
+  font-weight: bold;
+}
  
        </style>
     
@@ -33,45 +58,15 @@ body
     
     <body>
     
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Munasib Khan</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <nav>
+      <div class="home">HOME</div>
+      <div class="about">ABOUT</div>
+      <div class="projects">PROJECTS</div>
+      <div class="blog">BLOG</div>
+    </nav>
     
         <div class="container">
-            <center>Welcome to My Page</center>
+            <center>Home</center>
             </div>
             <center><h3>Munasib Khan - 2021</h3></center>
     
