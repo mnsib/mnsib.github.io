@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-    
+ 
     document.querySelector(".home").addEventListener("click", show_home)
     
     document.querySelector(".about").addEventListener("click", show_about)
@@ -54,10 +54,32 @@ function show_blog(){
     while (parent.firstChild) {
         parent.firstChild.remove()
     }
-    const center = document.createElement("center")
-    const p = document.createElement("p")
-    p.textContent = "Hello Welcome to Blog page"
-    center.appendChild(p)
-    parent.appendChild(center)
+    
+    fetch("posts.json")
+    .then(response => response.json())
+    .then(posts => {
+        for (let i = 0; i < Object.keys(posts).length; i++){
+            const a = document.createElement("a")
+            const hr = document.createElement("hr")
+            a.href = "#"
+            a.addEventListener("click", () => {
+                const parent = document.querySelector(".container")
+                while (parent.firstChild) {
+                    parent.firstChild.remove()
+                }
+                const center = document.createElement("center")
+                const title = document.createElement("h4")
+                const body  = document.createElement("p")
+                title.textContent = posts[i].title
+                body.textContent = posts[i].body
+                document.querySelector(".container").appendChild(center)
+                center.appendChild(title)
+                center.appendChild(body)
+            })
+            a.textContent = posts[i].title
+            document.querySelector(".container").appendChild(a)
+            document.querySelector(".container").appendChild(hr)
+        }
+    })
     
 }
