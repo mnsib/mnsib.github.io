@@ -61,7 +61,7 @@ function show_blog(){
         for (let i = 0; i < Object.keys(posts).length; i++){
             const a = document.createElement("a")
             const hr = document.createElement("hr")
-            a.href = "#"
+            a.href = `#${posts[i].title}#`
             a.addEventListener("click", () => {
                 const parent = document.querySelector(".container")
                 while (parent.firstChild) {
