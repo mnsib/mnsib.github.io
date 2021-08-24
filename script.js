@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    const products = ["WEB APPLICATIONS", "API'S", "DATABASES", "UI/UX"]
+    const products = ["WEB APPLICATIONS", "API's", "DATABASES", "UI/UX"]
 
     setInterval(function() {
         document.querySelector(".iworkwith").textContent = "return";
@@ -37,7 +37,7 @@ function showAbout(){
 
        const about_description = document.querySelector(".about-description");
        about_description.textContent = "";
-       const description = "I am self taught Web Developer with expertise in Web Application development. From simple static sites to data driven dynamic web applications, I can build for you what you need. Send me direct email to discuss your next project!";
+       const description = "I am professional Web Developer with expertise in Web Application development. From simple static sites to data driven dynamic web applications, I can build for you what you need. Send me direct email to discuss your next project!";
        let char_counter = 0;
        setInterval(function() {
        if (char_counter >= description.length){
