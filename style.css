@@ -120,3 +120,7 @@ audio {
 .card-body {
     text-align: justify;
 }
+.modal-header, .modal-footer {
+    border-top: white;
+    border-bottom: white;
+}
