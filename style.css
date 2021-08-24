@@ -5,8 +5,10 @@ body {
 
 .brand-name {
         font-weight: bold;
-        font-size: 14px;
+        font-size: 18px;
+        font-family: 'Rajdhani';
         padding-top: 7px;
+
 }
 .email {
     text-align: right;
@@ -74,6 +76,7 @@ body {
 
 .modal-dialog {
     max-width: 100%;
+    margin: 10px;
 }
 
 .card-img {
@@ -94,6 +97,7 @@ audio {
     border-radius: 50%;
 }
 .about-description {
+    font-size: 18px;
     color: black;
     font-family: 'Klee One';
 }
@@ -102,3 +106,11 @@ audio {
     height: 450px;
 }
 
+.card-header, .card-footer {
+    background: rgb(130, 130, 130);
+    text-align: center;
+    color: white;
+}
+.card-body, .card-image-div {
+    background: #ddd;
+}
