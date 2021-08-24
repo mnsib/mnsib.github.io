@@ -42,8 +42,8 @@
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="card shadow main-page mt-5 col-md-6">
-                            <p><span class="const text-primary">function</span><span class="munasibkhan text-warning"> Me()<span class="opencurly"> {</span></span></p>
-                            <p><span class="iworkwith text-danger"></span><span class="webdeveloper text-success"> what I do;</span></p>
+                            <p><span class="const text-primary">let</span><span class="munasibkhan text-warning"> Me = () =><span class="opencurly"> {</span></span></p>
+                            <p><span class="iworkwith text-danger"></span><span class="webdeveloper text-success"> product;</span></p>
                             <span class="closecurly"> }</span>
                         </div>
                     </div>
@@ -77,43 +77,43 @@
 
                     <div class="card mt-2">
                             <div class="card-header"><strong>CS TRANSPORT</strong></div>
-                                <div class="card-image-div">
-                                    <img class="card-img mt-1" src="./cs_transport_main.png" />
-                                </div>
                             <div class="card-body">
                                 <div class="card-text">
                                     <span>A Bus Ticket booking application where travellers can book a seat <strong>Django, Python, JavaScript</strong>.</span>
                                 </div>
                             </div>
+                            <div class="card-image-div">
+                                    <img class="card-img mt-1" src="./cs_transport_main.png" />
+                                </div>
                             <div class="card-footer">
                                <center> <a href="http://mnsibkhan.pythonanywhere.com/" target="_blank" class="btn btn-outline-warning">Live Demo</a></center>
                             </div>
                         </div>
 
-                        <div class="card mt-2">
-                            <div class="card-header"><strong>Network</strong></div>
-                                <div class="card-image-div">
-                                    <img class="card-img mt-1" src="https://previews.123rf.com/images/onston/onston1808/onston180800004/111278239-responsive-web-site-design-with-laptop-tablet-computer-and-mobile-phone-screen-.jpg" />
-                                </div>
+                        <div class="card mt-4">
+                            <div class="card-header"><strong>NETWORK</strong></div>
                             <div class="card-body">
                                 <div class="card-text">
                                     <span>This a network application built in <strong>Django, Python, JavaScript</strong> and connect various users.</span>
                                 </div>
+                            </div>
+                            <div class="card-image-div">
+                                    <img class="card-img mt-1" src="https://previews.123rf.com/images/onston/onston1808/onston180800004/111278239-responsive-web-site-design-with-laptop-tablet-computer-and-mobile-phone-screen-.jpg" />
                             </div>
                             <div class="card-footer">
                                 <center><a href="#" class="btn btn-outline-warning">Live Demo</a></center>
                             </div>
                         </div>
 
-                        <div class="card mt-2">
-                            <div class="card-header"><strong>Commerce</strong></div>
-                                <div class="card-image-div">
-                                    <img class="card-img mt-1" src="https://image.shutterstock.com/shutterstock/photos/1521125873/display_1500/stock-vector-responsive-website-design-with-laptop-computer-and-mobile-phone-screen-vector-illustration-1521125873.jpg" />
-                                </div>
+                        <div class="card mt-4">
+                            <div class="card-header"><strong>COMMERCE</strong></div>
                             <div class="card-body">
                                 <div class="card-text">
                                     <span>Commerce Application is listing and auction type of of web application. This is also built in  <strong>Django, Python, JavaScript</strong> and connect various users.</span>
                                 </div>
+                            </div>
+                            <div class="card-image-div">
+                                    <img class="card-img mt-1" src="https://image.shutterstock.com/shutterstock/photos/1521125873/display_1500/stock-vector-responsive-website-design-with-laptop-computer-and-mobile-phone-screen-vector-illustration-1521125873.jpg" />
                             </div>
                             <div class="card-footer">
                                 <center><a href="#" class="btn btn-outline-warning">Live Demo</a></center>
@@ -137,16 +137,16 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">ABOUT ME</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Hi! Welcome...</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                   <img class="img img-fluid rounded-circle profile-image mx-auto d-block" src="./munasib_khan_profile.jpeg" />
-                  <hr/>
+                  <hr style="opacity: 0%"/>
                   <!--About description is filled through javascript-->
                 <p class="about-description"></p>
                 <div class="contact-me">
-                    <hr />
+                    <hr style="opacity: 0%" />
                     <center><a class="email btn btn-outline-warning" href="mailto: mnsibkhan@gmail.com"><span class="fa fa-envelope fa-lg"></span>  mnsibkhan@gmail.com</a></center>
                 </div>
               </div>
@@ -156,12 +156,18 @@
             </div>
           </div>
         </div>
+
     </div>
 
+            <!--Mouse Click Sound-->
+        <audio id="mouse-click-sound" controls autoplay="true">
+          <source src="./mouse_click.mp3" type="audio/mpeg">
+        </audio>
 
- <audio controls autoplay="true">
-  <source src="./mouse_click.mp3" type="audio/mpeg">
-</audio>
+        <!--Keyboard Typing Sound-->
+        <audio id="keyboard-typing-sound" controls autoplay="true">
+          <source src="./keyboard_typing.mp3" type="audio/mpeg">
+        </audio>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
