@@ -108,11 +108,15 @@ audio {
     height: 450px;
 }
 
-.card-header, .card-footer {
-    background: rgb(130, 130, 130);
+.card-header, .card-footer, .card-body, .card-image-div {
     text-align: center;
     color: white;
+    background-color: #dee2e6;
+    border-top: black;
+    border-bottom: black;
+    color: black;
 }
-.card-body, .card-image-div {
-    background: #ddd;
+
+.card-body {
+    text-align: justify;
 }
