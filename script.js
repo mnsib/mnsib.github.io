@@ -1,85 +1,59 @@
 document.addEventListener("DOMContentLoaded", function(){
- 
-    document.querySelector(".home").addEventListener("click", show_home)
-    
-    document.querySelector(".about").addEventListener("click", show_about)
-    
-    document.querySelector(".projects").addEventListener("click", show_projects)
-    
-    document.querySelector(".blog").addEventListener("click", show_blog)
-  })
-  
-  
-function show_about(){
-    const parent = document.querySelector(".container")
-    while (parent.firstChild) {
-        parent.firstChild.remove()
-    }
-    const center = document.createElement("center")
-    const p = document.createElement("p")
-    p.textContent = "Hello Welcome to about page"
-    center.appendChild(p)
-    parent.appendChild(center)
-    
+
+    const products = ["WEB APPLICATIONS", "API'S", "DATABASES", "UI/UX"]
+
+    setInterval(function() {
+        document.querySelector(".iworkwith").textContent = "return";
+    }, 1000)
+
+
+    // this will show what I do
+     let counter = 0;
+     setInterval(function(){
+         if (counter >= products.length) {
+             counter = 0;
+         }
+         document.querySelector(".console").textContent = `${products[counter]}`;
+         counter++;
+     },2000)
+
+
+document.querySelector(".about-button").addEventListener("click", function(){
+    document.querySelector("audio").volume = .5;
+    document.querySelector("audio").play();
+})
+document.querySelector(".portfolio-button").addEventListener("click", function(){
+    document.querySelector("audio").volume = .5;
+    document.querySelector("audio").play();
+})
+
+document.querySelector(".contact-me").style.display = "none";
+
+
+let interval;
+
+function showAbout(){
+
+
+       const about_description = document.querySelector(".about-description");
+       about_description.textContent = "";
+       const description = "I am self taught Web Developer with expertise in Web Application development. From simple static sites to data driven dynamic web applications, I can build for you what you need. Send me direct email to discuss your next project!";
+       let char_counter = 0;
+       setInterval(function() {
+       if (char_counter >= description.length){
+                counter = 0;
+                document.querySelector(".contact-me").style.display = "block";
+                return 0;
+            }
+            about_description.textContent = about_description.textContent + description[char_counter];
+            char_counter++;
+       }, 50);
+
+
 }
 
-function show_home(){
-    const parent = document.querySelector(".container")
-    while (parent.firstChild) {
-        parent.firstChild.remove()
-    }
-    const center = document.createElement("center")
-    const p = document.createElement("p")
-    p.textContent = "Hello Welcome to Home page"
-    center.appendChild(p)
-    parent.appendChild(center)
-    
-}
 
-function show_projects(){
-    const parent = document.querySelector(".container")
-    while (parent.firstChild) {
-        parent.firstChild.remove()
-    }
-    const center = document.createElement("center")
-    const p = document.createElement("p")
-    p.textContent = "Hello Welcome to Projects page"
-    center.appendChild(p)
-    parent.appendChild(center)
-    
-}
+document.querySelector(".about").addEventListener("click", showAbout);
 
-function show_blog(){
-    const parent = document.querySelector(".container")
-    while (parent.firstChild) {
-        parent.firstChild.remove()
-    }
-    
-    fetch("posts.json")
-    .then(response => response.json())
-    .then(posts => {
-        for (let i = 0; i < Object.keys(posts).length; i++){
-            const a = document.createElement("a")
-            const hr = document.createElement("hr")
-            a.href = `#${posts[i].title}#`
-            a.addEventListener("click", () => {
-                const parent = document.querySelector(".container")
-                while (parent.firstChild) {
-                    parent.firstChild.remove()
-                }
-                const center = document.createElement("center")
-                const title = document.createElement("h4")
-                const body  = document.createElement("p")
-                title.textContent = posts[i].title
-                body.textContent = posts[i].body
-                document.querySelector(".container").appendChild(center)
-                center.appendChild(title)
-                center.appendChild(body)
-            })
-            a.textContent = posts[i].title
-            document.querySelector(".container").appendChild(a)
-            document.querySelector(".container").appendChild(hr)
-        }
-    })
-    
-}
+
+})
