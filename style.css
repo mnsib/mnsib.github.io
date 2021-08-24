@@ -1,6 +1,7 @@
 body {
     background: #f4f4f4;
     font-family: 'Roboto Mono';
+    color: #607d8b;
 }
 
 .brand-name {
@@ -100,6 +101,7 @@ audio {
     font-size: 18px;
     color: black;
     font-family: 'Klee One';
+    text-align: justify;
 }
 .portfolio-description {
     overflow-y: scroll;
