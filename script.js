@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function(){
          }
          document.querySelector(".console").textContent = `${products[counter]}`;
          counter++;
-     },2000)
+     }, 1500)
 
 
 document.querySelector(".about-button").addEventListener("click", function(){
-    document.querySelector("audio").volume = .5;
-    document.querySelector("audio").play();
+    document.querySelector("#keyboard-typing-sound").volume = .5;
+    document.querySelector("#keyboard-typing-sound").play();
 })
 document.querySelector(".portfolio-button").addEventListener("click", function(){
     document.querySelector("audio").volume = .5;
@@ -30,14 +30,12 @@ document.querySelector(".portfolio-button").addEventListener("click", function()
 document.querySelector(".contact-me").style.display = "none";
 
 
-let interval;
-
 function showAbout(){
 
 
        const about_description = document.querySelector(".about-description");
        about_description.textContent = "";
-       const description = "I am professional Web Developer with expertise in Web Application development. From simple static sites to data driven dynamic web applications, I can build for you what you need. Send me direct email to discuss your next project!";
+       const description = "I am professional Web Developer with expertise in Web Application development. From simple static sites to data driven dynamic web applications, I can build for you what you need. Send me direct email to discuss your next project and answer your question!";
        let char_counter = 0;
        setInterval(function() {
        if (char_counter >= description.length){
@@ -47,7 +45,8 @@ function showAbout(){
             }
             about_description.textContent = about_description.textContent + description[char_counter];
             char_counter++;
-       }, 50);
+       }, 18);
+
 
 
 }
